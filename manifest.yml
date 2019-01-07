@@ -6,4 +6,4 @@ applications:
     routes:
       - route: pal-tracker-james-pavani.apps.evans.pal.pivotal.io
     env:
-      WELCOME_MESSAGE: hello from review environment
+      WELCOME_MESSAGE: hello
