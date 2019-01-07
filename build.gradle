@@ -38,4 +38,19 @@ dependencies {
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-tomcat
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.1.1.RELEASE'
 
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+
 }
+
+
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello!!",
+        "PORT": "the port",
+        "MEMORY_LIMIT": "millions",
+        "CF_INSTANCE_INDEX": "CF_INSTANCE_INDEX!!",
+        "CF_INSTANCE_ADDR": "CF_INSTANCE_ADDR!!",
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
