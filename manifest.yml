@@ -6,4 +6,4 @@ applications:
     routes:
       - route: pal-tracker-james-pavani.apps.evans.pal.pivotal.io
     env:
-      WELCOME_MESSAGE: Hello from Cloud Foundry
+      WELCOME_MESSAGE: Hello from the review environment
