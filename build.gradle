@@ -59,12 +59,13 @@ bootRun.environment([
         "SPRING_DATASOURCE_URL": developmentDbUrl,
         "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
         "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
-//        "ENV_NAME": "ootRun"
+        "management.info.git.mode": "FULL",
+        //        "ENV_NAME": "ootRun"
 ])
 
-bootRun {
-    systemProperty 'management.info.git.mode', 'FULL'
-}
+//bootRun {
+//    systemProperty 'management.info.git.mode', 'FULL'
+//}
 
 def testDbUrl = "jdbc:mysql://localhost:3306/tracker_test?user=tracker&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false"
 test.environment([
