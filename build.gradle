@@ -18,6 +18,7 @@ buildscript {
 plugins {
     id "java"
     id "org.flywaydb.flyway" version "5.0.5"
+    id "com.gorylenko.gradle-git-properties" version "1.5.1"
 }
 
 apply plugin: 'org.springframework.boot'
@@ -58,8 +59,12 @@ bootRun.environment([
         "SPRING_DATASOURCE_URL": developmentDbUrl,
         "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
         "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
-//        "ENV_NAME": "bootRun"
+//        "ENV_NAME": "ootRun"
 ])
+
+bootRun {
+    systemProperty 'management.info.git.mode', 'FULL'
+}
 
 def testDbUrl = "jdbc:mysql://localhost:3306/tracker_test?user=tracker&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false"
 test.environment([
