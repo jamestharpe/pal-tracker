@@ -10,6 +10,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Demonstrates simple CRUD operations using JDBC
+ * */
 public class JdbcTimeEntryRepository implements TimeEntryRepository {
     private final DataSource dataSource;
 

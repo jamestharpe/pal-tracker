@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * Just a POJO
+ */
 public class TimeEntry {
 
     private final long projectId;
@@ -63,6 +66,9 @@ public class TimeEntry {
         return hours;
     }
 
+    /**
+     * Determines equality based on properties rather than object pointer
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

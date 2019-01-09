@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Simple in-memory repository, not much to learn here.
+ */
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     private final HashMap<Long, TimeEntry> timeEntries = new HashMap<Long, TimeEntry>();
 

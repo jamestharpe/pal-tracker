@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Basically just "hello world" with an environment variable
+ */
 @RestController
 public class WelcomeController {
     private String message;

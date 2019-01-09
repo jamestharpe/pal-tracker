@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Demonstrates injecting controller constructor args from environment variables
+ * */
 @RestController
 public class EnvController {
     private String port, memoryLimit, cfInstanceIndex, cfInstanceAddress;

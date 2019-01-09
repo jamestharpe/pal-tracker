@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Demonstrates REST-based CRUD ops with injectable dependencies
+ */
 @RestController
 public class TimeEntryController {
     private final TimeEntryRepository timeEntryRepository;
@@ -19,6 +22,9 @@ public class TimeEntryController {
         this.timeEntryRepository = timeEntryRepository;
     }
 
+    /**
+     * Get object from body using @RequestBody
+     */
     @PostMapping("/time-entries")
     public ResponseEntity<TimeEntry> create(@RequestBody TimeEntry timeEntryToCreate) throws SQLException {
         TimeEntry created = this.timeEntryRepository.create(timeEntryToCreate);
@@ -26,6 +32,9 @@ public class TimeEntryController {
         return result;
     }
 
+    /**
+     * Get scalar from url path using @PathVariable
+     */
     @GetMapping("/time-entries/{timeEntryId}")
     public ResponseEntity<TimeEntry> read(@PathVariable long timeEntryId) throws SQLException {
         TimeEntry entry = this.timeEntryRepository.find(timeEntryId);

@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Demonstrates making "version 2" of a set of API end-points (no actual differences from TimeEntryController)
+ */
 @RestController
 public class TimeEntryControllerV2 {
     private final TimeEntryRepository timeEntryRepository;
