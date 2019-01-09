@@ -67,6 +67,7 @@ public class JdbcTimeEntryRepositoryTest {
                 "VALUES (999, 123, 321, '2017-01-09', 8)"
         );
 
+
         TimeEntry timeEntry = subject.find(999L);
 
         assertThat(timeEntry.getId()).isEqualTo(999L);
